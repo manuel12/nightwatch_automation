@@ -5,8 +5,8 @@ const {
 
 module.exports = {
   existingData: {
-    USERNAME: process.env.EMAIL,
-    PASSWORD: process.env.PASSWORD,
+    USERNAME: 'test_user123@gmail.com',
+    PASSWORD: 'automation',
 
     FIRST_NAME: 'Manuel',
     LAST_NAME: 'Pineda',
