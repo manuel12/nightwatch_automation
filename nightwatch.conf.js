@@ -25,7 +25,7 @@ module.exports = {
         browserName: 'chrome',
         version: 'latest-1',
         chromeOptions: {
-          args : ['headless'],
+          //args : ['headless'],
           w3c: false
         }
       }
