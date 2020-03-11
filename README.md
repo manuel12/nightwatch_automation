@@ -20,7 +20,7 @@ __The Smoke Tests consist of 8 test cases:__
 7. Check that existing user can logout
 8. Check that user account data is correct
 
-In order to run the smoke test just clone the repository, run `npm install` 
+In order to run the smoke test just clone the repository, go to the repo folder, then run `npm install` 
 and then run `npm test` 
 
 The tests will run on the chrome browser and can be ran either on normal or headless mode, in case you want to run them
