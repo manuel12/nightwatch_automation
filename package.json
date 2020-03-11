@@ -1,0 +1,22 @@
+{
+  "name": "E-commerce-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "debug": "node --inspect-brk node_modules/.bin/nightwatch",
+    "test": "nightwatch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^80.0.1",
+    "dotenv": "^7.0.0",
+    "faker": "^4.1.0",
+    "geckodriver": "^1.19.1",
+    "handlebars": "^4.7.3",
+    "nightwatch": "^1.3.4",
+    "selenium-standalone": "^6.17.0"
+  }
+}
