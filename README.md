@@ -29,6 +29,3 @@ on headless mode just uncomment `args : ['headless'],` property of chromeOptions
 
 After the test run an HTML report will be generated on the reports folder.
 
-**Note:** remember you will need credentials of an existing user on the automationpractice.com website in order to ran 
-login related tests, and require them on data/test-data.js. I recommed to add these credentials in a .env file. 
-
