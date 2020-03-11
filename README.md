@@ -23,9 +23,12 @@ __The Smoke Tests consist of 8 test cases:__
 In order to run the smoke test just clone the repository, run `npm install` 
 and then run `npm test` 
 
-The tests can be ran either on normal or headless mode, in case you want to run them
+The tests will run on the chrome browser and can be ran either on normal or headless mode, in case you want to run them
 on headless mode just uncomment `args : ['headless'],` property of chromeOptions on nightwatch.conf.js  
 
 
 After the test run an HTML report will be generated on the reports folder.
+
+**Note:** remember you will need credentials of an existing user on the automationpractice.com website in order to ran 
+login related tests, and require them on data/test-data.js. I recommed to add these credentials in a .env file. 
 
