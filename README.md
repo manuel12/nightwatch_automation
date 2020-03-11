@@ -1,6 +1,11 @@
 # nightwatch_automation
 
 ### Smoke Tets Automation ran over an e-commerce website
+The website in question is: http://automationpractice.com/index.php
+
+This website is a mock e-commerce shop where users can run automated tests.
+
+
 _These tests cover basic funcitonality that should be working in order 
 to proceed with more tests, or in case any test fail, report any errors for fixing  ._
 
