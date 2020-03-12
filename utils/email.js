@@ -7,7 +7,7 @@ Settings = {
   secure: false,
   agentEmail: process.env.GMAIL_USER,
   agentPassword: process.env.GMAIL_PASSWORD,
-  target: process.env.GMAIL_USER,
+  target: process.env.GMAIL_TARGET || process.env.GMAIL_USER,
   auth: {
     type: "login",
     user: process.env.GMAIL_USER,
@@ -25,7 +25,7 @@ const transporter = nodemailer.createTransport({
 
 const mailOptions = {
   from: Settings.agentEmail,
-  to: Settings.agentEmail,
+  to: Settings.target,
   subject: 'Test Run Message - E-commerce Shop',
   html: ''
 };
@@ -45,4 +45,5 @@ const Email = {
   }
 };
 
+console.log(Settings.target)
 module.exports = Email;
