@@ -1,7 +1,7 @@
 const {
   existingData,
   signUpData
-} = require('../data/test-data');
+} = require('../../data/test-data');
 const util = require('util');
 
 module.exports = {
