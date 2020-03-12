@@ -21,10 +21,10 @@ __The Smoke Tests consist of 8 test cases:__
 8. Check that user account data is correct
 
 In order to run the smoke test just clone the repository, go to the repo folder, then run `npm install` 
-and then run `npm test` 
+and then run `npm run test:smoke_tests`.
 
-The tests will run on the chrome browser and can be ran either on normal or headless mode, in case you want to run them
-on headless mode just uncomment `args : ['headless'],` property of chromeOptions on nightwatch.conf.js  
+The tests can run on the chrome or firefox browsers, and can be ran either on normal or headless mode, in case you want to run them
+on headless mode just run `npm run test:headless:chrome` or `npm run test:headless:firefox`.
 
 
 After the test run an HTML report will be generated on the reports folder.
