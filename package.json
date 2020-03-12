@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "debug": "node --inspect-brk node_modules/.bin/nightwatch",
-    
-    "test":"nightwatch",
-    "test:sandbox": "npx nightwatch -e firefox  -t sandbox -r html-reporter.js",
+    "test:sandbox": "npx nightwatch -e chromeHeadless -t sandbox -r html-reporter.js",
     "test:smoke_tests": "npx nightwatch -e firefox  -t smoke_tests -r html-reporter.js",
 
     "test:chrome": "npx nightwatch -e chrome -r html-reporter.js",
@@ -25,6 +23,7 @@
     "geckodriver": "^1.19.1",
     "handlebars": "^4.7.3",
     "nightwatch": "^1.3.4",
+    "nodemailer": "^6.4.5",
     "selenium-server": "^3.141.59",
     "selenium-standalone": "^6.17.0"
   }

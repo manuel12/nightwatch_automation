@@ -3,7 +3,6 @@ const geckodriver = require('geckodriver');
 const selenium = require('selenium-server');
 
 const SANDBOX_MODE = true;
-const USE_GECKO = true;
 const FF_BINARY_PATH = 'C:/Program Files/Mozilla Firefox/firefox.exe';
 
 module.exports = {
@@ -12,15 +11,6 @@ module.exports = {
   globals_path: 'globals.js',
   custom_commands_path: 'commands',
   output_folder: 'reports',
-  
-  webdriver: {
-    start_process: false,
-    port: USE_GECKO ? 4444 : 9515,
-    server_path: USE_GECKO ? geckodriver.path : chromedriver.path,
-    cli_args: [
-      "--log", "debug"
-    ]
-  },
 
   selenium: {
     start_process: true,
