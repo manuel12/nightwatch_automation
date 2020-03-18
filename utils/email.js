@@ -45,5 +45,4 @@ const Email = {
   }
 };
 
-console.log(Settings.target)
 module.exports = Email;
