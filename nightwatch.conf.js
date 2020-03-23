@@ -23,7 +23,7 @@ module.exports = {
     default: {
       selenium_port: 4444,
       selenium_host: 'localhost',
-      skip_testcases_on_fail: false
+      skip_testcases_on_fail: true
     },
     
     chrome: {
