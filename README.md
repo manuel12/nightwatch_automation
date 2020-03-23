@@ -1,4 +1,4 @@
-# nightwatch_automation
+# Nightwatch- Test Automation Project
 
 ### Automated smoke tests ran over an e-commerce website
 The website in question is: http://automationpractice.com/index.php
