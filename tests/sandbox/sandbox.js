@@ -2,24 +2,32 @@ const {
   existingData,
   signUpData
 } = require('../../data/test-data');
-const util = require('util');
 
 module.exports = {
 
-    beforeEach: function(browser, done) {
-      homePage = browser.page.home_page();
-      loginPage = browser.page.login_page();
+  '@tags': ['sandbox'],
 
-      homePage.navigate();
-      done();
-    },
+  beforeEach: function(browser, done) {
+    homePage = browser.page.home_page();
+    loginPage = browser.page.login_page();
+    accountPage = browser.page.account_page();
+    orderPage = browser.page.order_page();
+    personalInfoPage = browser.page.personal_info_page();
+    signUpPage = browser.page.signup_page();
 
-    'Run sandbox': function(browser) {
-    	loginPage.login(existingData.USERNAME, existingData.PASSWORD)
-    },
+    homePage.navigate();
+    done()
+  },
+  
+  'Sandbox Test': function(browser) {
+  },
 
-    afterEach: function(browser, done) {
-    	browser.end();	
-    	done();
-    }
+
+  afterEach: function(browser, done) {
+    browser
+      .url('http://automationpractice.com/index.php?mylogout=')
+      .deleteCookies()
+      .end();
+    done();
+  }
 }
