@@ -11,7 +11,7 @@
     "test:headless:chrome": "npx nightwatch -e chromeHeadless --tag smoke-tests -r html-reporter.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Manuel Pineda",
   "license": "ISC",
   "devDependencies": {
     "chromedriver": "^80.0.1",
