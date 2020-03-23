@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const handlebars = require('handlebars');
 const Email = require('./utils/email');
+const { formatResults } = require('./utils/utils');
 
 module.exports = {
   write : function(results, options, done) {
@@ -13,13 +14,14 @@ module.exports = {
 
       const TEMPLATE = data.toString();
       const html = handlebars.compile(TEMPLATE)({
-        results   : results,
+        results   : formatResults(results),
         options   : options,
         timestamp : new Date().toString(),
         browser   : options.filename_prefix.split('_').join(' ')
       });
 
-      if(Email.isEnabled()) Email.sendEmail(html);
+      if(process.env.USE_EMAIL==1) 
+        Email.sendEmail(html);
       
       fs.writeFile(REPORT_FILE_PATH, html, function(err) {
         if (err) throw err;
@@ -30,3 +32,4 @@ module.exports = {
     });
   }
 };
+
