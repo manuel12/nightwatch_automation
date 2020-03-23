@@ -21,7 +21,7 @@
         border-bottom: 1px black solid;
         border-right: none;
       }
-
+      /*td.details{ color: #140000; width: 100%; background: #e47911; }*/
       td.pass { color: #003b07; background: #86e191; }
       td.skip { color: #7d3a00; background: #ffd24a; }
       td.fail { color: #5e0e00; background: #ff9c8a; }
@@ -55,7 +55,7 @@
 
 <body>
   <h1>Test Results</h1>
-
+  <h3><strong><ins>Details</ins></strong></h3>
   <table border="0" cellpadding="0" cellspacing="0">
     <tr class="overview">
       <td colspan="3" title="{{browser}}"><strong>Browser:</strong> {{browser}}</td>
@@ -63,8 +63,11 @@
     <tr class="overview">
       <td colspan="3"><strong>Timestamp:</strong> {{timestamp}}</td>
     </tr>
-    <tr class="overview last">
-      <td colspan="3"><strong>Tests:</strong> {{results.tests}}<br></td>
+    <tr class="overview">
+      <td colspan="3"><strong>Number of Tests:</strong> {{results.numberOfTests}}</td>
+    </tr>
+    <tr class="overview">
+      <td colspan="3"><strong>Tests Runtime:</strong> {{results.testsRunTime}}s</td>
     </tr>
     <tr>
       <td class="pass"><strong>{{results.passed}}</strong> passed</td>
@@ -74,7 +77,7 @@
   </table>
 
   {{#each results.modules}}
-      <h2>{{@key}}</h2>
+      <h3><ins>{{@key}}</ins></h3>
 
       {{#each this.completed}}
         <h3>{{@key}}</h3>
@@ -131,19 +134,7 @@
 
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script>
-  $(function() {
-    $('div.stacktrace').on('click', 'a', function(evt) {
-      evt.preventDefault();
-
-      var $link = $(this);
-      var $code = $link.parent().find('code');
-
-      $code.is(':visible') ? $link.text('hide stacktrace'):
-                             $link.text('view stacktrace');
-
-      $code.toggle();
-    });
-  });
+$(function(){$("div.stacktrace").on("click","a",function(t){t.preventDefault();var e=$(this),c=e.parent().find("code");c.is(":visible")?e.text("hide stacktrace"):e.text("view stacktrace"),c.toggle()})});
   </script>
 </body>
 </html>
