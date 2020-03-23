@@ -5,13 +5,10 @@
   "main": "index.js",
   "scripts": {
     "debug": "node --inspect-brk node_modules/.bin/nightwatch",
-    "test:sandbox": "npx nightwatch -e chromeHeadless -t sandbox -r html-reporter.js",
-    "test:smoke_tests": "npx nightwatch -e firefox  -t smoke_tests -r html-reporter.js",
 
-    "test:chrome": "npx nightwatch -e chrome -r html-reporter.js",
-    "test:headless:chrome": "npx nightwatch -e chromeHeadless -r html-reporter.js",
-    "test:firefox": "npx nightwatch -e firefox -r html-reporter.js",
-    "test:headless:firefox": "npx nightwatch -e firefoxHeadless -r html-reporter.js"
+    "test:sandbox": "npx nightwatch -e chrome --tag sandbox -r html-reporter.js",
+    "test:chrome": "npx nightwatch -e chrome --tag smoke-tests -r html-reporter.js",
+    "test:headless:chrome": "npx nightwatch -e chromeHeadless --tag smoke-tests -r html-reporter.js",
   },
   "keywords": [],
   "author": "",
@@ -25,6 +22,7 @@
     "nightwatch": "^1.3.4",
     "nodemailer": "^6.4.5",
     "selenium-server": "^3.141.59",
-    "selenium-standalone": "^6.17.0"
+    "selenium-standalone": "^6.17.0",
+    "timer": "^1.0.1"
   }
 }
