@@ -57,6 +57,7 @@ module.exports = {
 
     const pageElements = orderPage.getElements();
     browser
+      .assert.urlContains('http://automationpractice.com/index.php?controller=order-confirmation')
       .assert.elementPresent(pageElements.orderConfirmation)
       .assert.containsText(pageElements.orderConfirmation, 'ORDER CONFIRMATION')
       .assert.elementPresent(pageElements.orderComplete)
@@ -82,9 +83,9 @@ module.exports = {
 
     const pageElements = loginPage.getElements();
     browser
+      .assert.urlEquals(accountPage.url)
       .assert.not.elementPresent(pageElements.invalidCredentials)
       .assert.containsText(pageElements.pageHeading, 'MY ACCOUNT')
-      .assert.urlEquals(accountPage.url)
       .assert.title('My account - My Store');
   },
 
@@ -95,9 +96,9 @@ module.exports = {
 
     const pageElements = loginPage.getElements();
     browser
-       .assert.containsText(pageElements.pageHeading, 'AUTHENTICATION')
-       .assert.urlEquals(loginPage.url)
-       .assert.title('Login - My Store');
+      .assert.urlEquals(loginPage.url)
+      .assert.containsText(pageElements.pageHeading, 'AUTHENTICATION')
+      .assert.title('Login - My Store');
   },
 
   'Check that user account data is correct': function(browser) {
@@ -106,6 +107,7 @@ module.exports = {
 
     const pageElements = personalInfoPage.getElements();
     browser
+      .assert.urlEquals(personalInfoPage.url)
       .assert.value(pageElements.firstName, existingData.FIRST_NAME)
       .assert.value(pageElements.lastName, existingData.LAST_NAME)
       .assert.value(pageElements.email, existingData.USERNAME)
