@@ -5,11 +5,10 @@ const {
 } = require('../utils/page-objects');
 
 const accountPageCommands = {
-  getElements,
   clickOnElement,
+  getElements,
   signOut() {
     return this
-      .waitForElementPresent('@signOutButton', SIGNIN_OUT)
       .clickOnElement('@signOutButton');
   }
 }
