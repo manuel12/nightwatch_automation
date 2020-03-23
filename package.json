@@ -8,7 +8,7 @@
 
     "test:sandbox": "npx nightwatch -e chrome --tag sandbox -r html-reporter.js",
     "test:chrome": "npx nightwatch -e chrome --tag smoke-tests -r html-reporter.js",
-    "test:headless:chrome": "npx nightwatch -e chromeHeadless --tag smoke-tests -r html-reporter.js",
+    "test:headless:chrome": "npx nightwatch -e chromeHeadless --tag smoke-tests -r html-reporter.js"
   },
   "keywords": [],
   "author": "",
