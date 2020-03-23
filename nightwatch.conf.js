@@ -1,25 +1,21 @@
+require('dotenv').config();
 const chromedriver = require('chromedriver');
-const geckodriver = require('geckodriver');
 const selenium = require('selenium-server');
 
-const SANDBOX_MODE = true;
-const FF_BINARY_PATH = 'C:/Program Files/Mozilla Firefox/firefox.exe';
-
 module.exports = {
-  src_folders: [SANDBOX_MODE ? 'tests/sandbox/' : 'tests/smoke_tests/'],
+  src_folders: ['tests'],
   page_objects_path: ['page_objects'],
   globals_path: 'globals.js',
   custom_commands_path: 'commands',
   output_folder: 'reports',
-
+  
   selenium: {
     start_process: true,
     server_path: selenium.path,
     port: 4444,
     check_process_delay: 5000,
     cli_args: {
-      'webdriver.chrome.driver': chromedriver.path,
-      'webdriver.gecko.driver': geckodriver.path,
+      'webdriver.chrome.driver': chromedriver.path
     }
   },
   
@@ -27,6 +23,7 @@ module.exports = {
     default: {
       selenium_port: 4444,
       selenium_host: 'localhost',
+      skip_testcases_on_fail: false
     },
     
     chrome: {
@@ -46,27 +43,6 @@ module.exports = {
           w3c: false,
           prefs: { 'profile.managed_default_content_settings.notifications': 1 },
           args: ['headless', 'no-sandbox', 'disable-gpu']
-        }
-      }
-    },
-    
-    firefox: {
-      desiredCapabilities: {
-        browserName: 'firefox',
-        javascriptEnabled: true,
-        'moz:firefoxOptions': {
-          binary: FF_BINARY_PATH
-        }
-      }
-    },
-    
-    firefoxHeadless: {
-      desiredCapabilities: {
-        browserName: 'firefox',
-        javascriptEnabled: true,
-        'moz:firefoxOptions': {
-          binary: FF_BINARY_PATH,
-          args: ['--headless']
         }
       }
     }
