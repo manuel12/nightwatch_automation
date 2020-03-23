@@ -24,8 +24,6 @@ const homePageCommands = {
       .waitForElementPresent(ADD_TO_CART_BUTTON_SELECTOR, 
         `${ADDING_PRODUCT_TO_CART} with number [${PRODUCT_NUMBER}]`)
       .click(ADD_TO_CART_BUTTON_SELECTOR)
-      .waitForElementVisible('@cartLayer')
-      .waitForElementVisible('@productSuccessFullyAdded')
   }
 };
 
