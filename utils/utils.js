@@ -28,7 +28,15 @@ function removeANSIColors(string) {
   return string.replace(ESCAPE_REGEX, '');
 }
 
-function removeANSIColorsFromAssertions(results) {
+function removeRepeatedText(string) {
+  if(string.includes('Expected') || string.includes('but got:')) {
+      const splittedArr = string.split(' Expected'); 
+      return splittedArr[0]; // just keep the first part of the string
+  }
+  return string;
+}
+
+function cleanUpAssertions(results) {
  const modules = results.modules;
   
   Object.keys(modules).forEach((module) => {
@@ -41,6 +49,7 @@ function removeANSIColorsFromAssertions(results) {
   
       currentTestAssertions.forEach((assertion) => {
         assertion.message = removeANSIColors(assertion.fullMsg);
+        assertion.message = removeRepeatedText(assertion.message);
       })
     })
   })
@@ -77,7 +86,7 @@ function addNumberOfTests(results) {
 }
 
 function formatResults(results) {
-  removeANSIColorsFromAssertions(results);
+  cleanUpAssertions(results);
   addTestsRunTime(results);
   addNumberOfTests(results);
   return results;
