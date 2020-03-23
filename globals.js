@@ -1,6 +1,6 @@
 module.exports = {
-  abortOnAssertionFailure: false,
-  waitForConditionPollInterval : 1000,
+  abortOnAssertionFailure: true,
+  waitForConditionPollInterval : 1500,
   waitForConditionTimeout: 3000,
 
   beforeEach: (browser, done) => {

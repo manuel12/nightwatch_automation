@@ -1,3 +1,13 @@
+const {
+  getElements,
+  clickOnElement
+} = require('../utils/page-objects');
+
+personalInfoPageCommands = {
+  getElements,
+  clickOnElement
+}
+
 module.exports = {
   url: 'http://automationpractice.com/index.php?controller=identity',
   elements: {
@@ -8,5 +18,6 @@ module.exports = {
     dayOfBirth: '#uniform-days',
     monthOfBirth: '#uniform-months',
     yearOfBirth: '#uniform-years'
-  }
+  },
+  commands: [personalInfoPageCommands]
 }

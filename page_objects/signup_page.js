@@ -18,8 +18,10 @@ const signUpPageCommands = {
       .waitForElementPresent(`//*[@id="uniform-${selector}"]`, 
         `${SELECTING_USER_DATA} with [//*[@id="uniform-${selector}"]] with value [${value}]`)
       .click(`//*[@id="uniform-${selector}"]`, () => {
-        this.click(`//*[@id="${selector}"]/option[${value}]`);
+        this
+        .click(`//*[@id="${selector}"]/option[${value}]`)
       });
+      
   },
   completeSignUp(data) {
     return this
@@ -28,7 +30,7 @@ const signUpPageCommands = {
       .typeData('@lastNameForm', data.RNDM_LAST_NAME)
       .typeData('@passwordForm', data.RNDM_PASSWORD)
 
-      .selectFromDropdown('days', data.DAY_OF_BIRTH, )
+      .selectFromDropdown('days', data.DAY_OF_BIRTH)
       .selectFromDropdown('months', data.MONTH_OF_BIRTH)
       .selectFromDropdown('years', data.YEAR_OF_BIRTH)
 
@@ -37,14 +39,13 @@ const signUpPageCommands = {
       .typeData('@addressForm', data.RNDM_ADDRESS)
 
       .typeData('@cityForm', data.RNDM_CITY)
-      .selectFromDropdown('id_state', data.RNDM_STATE)
       .typeData('@zipcodeForm', data.RNDM_ZIPCODE)
       .selectFromDropdown('id_country', data.COUNTRY)
-
+      .selectFromDropdown('id_state', data.RNDM_STATE)
       .typeData('@phoneForm', data.RNDM_PHONE_NUMBER)
       .typeData('@aliasAddressForm', data.RNDM_ADDRESS)
 
-      .submit('@registerButton');
+      .submit('@registerButton')
   }
 
 };
