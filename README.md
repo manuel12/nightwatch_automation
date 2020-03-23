@@ -7,7 +7,7 @@ This website is a mock e-commerce shop where users can run automated tests.
 
 
 _These tests cover basic funcitonality that should be working in order 
-to proceed with more tests, or in case any test fail, report any errors for fixing  ._
+to proceed with more tests, or in case any test fail, report any errors for fixing._
 
 __The Smoke Tests consist of 8 test cases:__
 
@@ -28,5 +28,6 @@ on headless mode just run `npm run test:headless:chrome` or `npm run test:headle
 
 
 After the test run an HTML report will be generated on the reports folder.
-An email will also be sent as long as `Settings.enabled` is set to true on utils/email.js. If no `GMAIL_TARGET`is specified on .env file the code will default the receiver to `GMAIL_USER`.
+An email will also be sent as long as `Settings.enabled` is set to true on utils/email.js. 
+To be able to send email an .env file should be located on root folder with the following credentials: `GMAIL_USER`, `GMAIL_PASSWORD` and `GMAIL_TARGET`. If no `GMAIL_TARGET`is specified on .env file the code will default the receiver to `GMAIL_USER`.
 
