@@ -28,3 +28,5 @@ An email report can also be sent.
 
 __Note:__ To be able to send email an .env file should be located on root folder with the following credentials: `GMAIL_USER`, `GMAIL_PASSWORD` and `GMAIL_TARGET`. If no `GMAIL_TARGET`is specified on .env file the code will default the receiver to `GMAIL_USER`.
 
+Finally a sandbox environment is created at tests/sandbox. Here new testcases can be created and launched individually before they are added to a test suite. In order to run the sanbdox tests just run `npm run test:sandbox`.
+
