@@ -1,5 +1,5 @@
 const {
-  clickOnElement,
+  getElements
 } = require('../utils/page-objects');
 const {
   generateNumberBetween
@@ -10,6 +10,7 @@ const {
 } = require('../data/logs');
 
 const homePageCommands = {
+  getElements,
   addToCart() {
     const PRODUCT_NUMBER = generateNumberBetween(1, 7);
     const PRODUCT_TO_SELECT = `@product${PRODUCT_NUMBER}`;
@@ -62,6 +63,7 @@ module.exports = {
       selector: '//*[@id="homefeatured"]/li[7]/div',
       locateStrategy: 'xpath'
     },
+    shoppingCartLink: '#header > div:nth-child(3) > div > div > div:nth-child(3) > div',
     cartLayer: '#layer_cart',
     productSuccessFullyAdded: '#layer_cart > div.clearfix > div.layer_cart_product.col-xs-12.col-md-6 > h2',
     closeCartLayerButton: {
