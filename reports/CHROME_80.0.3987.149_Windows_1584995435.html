@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Results - CHROME 80.0.3987.149 Windows </title>
+
+  <style>
+    html, body {
+      font-family: Arial,sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body { padding: 10px 40px; }
+
+    table { width: 100%; margin-bottom: 20px; }
+
+      td {
+        padding: 7px;
+        border-top: none;
+        border-left: 1px black solid;
+        border-bottom: 1px black solid;
+        border-right: none;
+      } 
+      td.pass { color: #003b07; background: #86e191; }
+      td.skip { color: #7d3a00; background: #ffd24a; }
+      td.fail { color: #5e0e00; background: #ff9c8a; }
+
+    tr:last-child       { border-top: 1px black solid; }
+      tr:last-child td    { border-top: 1px black solid; }
+      tr:first-child td   { border-top: 1px black solid; }
+        td:last-child       { border-right: 1px black solid; }
+
+    tr.overview td      { padding-bottom: 0px; border-bottom: none; }
+    tr.overview.last td { padding-bottom: 3px; }
+
+    ul.assertions   { list-style-type: none; }
+      span.error      { color: #AD2B2B; }
+      span.success    { color: #53891E; }
+
+    .stacktrace { display: inline; }
+      .stacktrace code { display: none; }
+
+    #nightwatch-logo {
+      position: absolute;
+      top: 20px;
+      right: 33px;
+      width: 70px;
+      height: 75px;
+      background: transparent url('http://nightwatchjs.org/img/logo-nightwatch.png') no-repeat;
+      background-size: 70px 75px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Test Results</h1>
+  <h3><strong><ins>Details</ins></strong></h3>
+  <table border="0" cellpadding="0" cellspacing="0">
+    <tr class="overview">
+      <td colspan="3" title="CHROME 80.0.3987.149 Windows "><strong>Browser:</strong> CHROME 80.0.3987.149 Windows </td>
+    </tr>
+    <tr class="overview">
+      <td colspan="3"><strong>Timestamp:</strong> Mon Mar 23 2020 21:30:35 GMT+0100 (Central European Standard Time)</td>
+    </tr>
+    <tr class="overview">
+      <td colspan="3"><strong>Number of Tests:</strong> 8</td>
+    </tr>
+    <tr class="overview">
+      <td colspan="3"><strong>Tests Runtime:</strong> 101.13s</td>
+    </tr>
+    <tr>
+      <td class="pass"><strong>73</strong> passed</td>
+      <td class="skip"><strong>0</strong> errors</td>
+      <td class="fail"><strong>0</strong> failures</td>
+    </tr>
+  </table>
+
+      <h3><ins>smoke_tests\smoke-tests</ins></h3>
+
+        <h3>Check that main page is shown</h3>
+        <ul class="assertions">
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element &lt;Element [name&#x3D;@main]&gt; is present (6534ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if the page title equals &#x27;My Store&#x27; (30ms)
+
+
+            </li>
+        </ul>
+
+        <p>
+            <span class="success"><strong>OK.</strong></span>
+            <span class="success"><strong>2</strong></span> assertions passed. (7.008s)
+        </p>
+        <h3>Check that catalogue is shown</h3>
+        <ul class="assertions">
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element &lt;Element [name&#x3D;@catalogue]&gt; is present (5564ms)
+
+
+            </li>
+        </ul>
+
+        <p>
+            <span class="success"><strong>OK.</strong></span>
+            <span class="success"><strong>1</strong></span> assertions passed. (5.898s)
+        </p>
+        <h3>Check that addding an item to cart is possible</h3>
+        <ul class="assertions">
+            <li>
+                <span class="success">&#10004;</span>
+
+              Choosing random product...
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Adding product to cart... with number [1]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element &lt;Element [name&#x3D;@shoppingCartLink]&gt; does not contain text &#x27;empty&#x27; (1786ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element &lt;Element [name&#x3D;@productSuccessFullyAdded]&gt; is present (51ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element &lt;Element [name&#x3D;@productSuccessFullyAdded]&gt; contains text &#x27;Product successfully added to your shopping cart&#x27; (95ms)
+
+
+            </li>
+        </ul>
+
+        <p>
+            <span class="success"><strong>OK.</strong></span>
+            <span class="success"><strong>5</strong></span> assertions passed. (7.630s)
+        </p>
+        <h3>Check that user can complete checkout</h3>
+        <ul class="assertions">
+            <li>
+                <span class="success">&#10004;</span>
+
+              Choosing random product...
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Adding product to cart... with number [3]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [test_user123@gmail.com] on selector [@usernameForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [automation] on selector [@passwordForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Submitting user data... on selector [@signInButton]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Clicking... on selector [@step1CheckoutButton]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Clicking... on selector [@step3CheckoutButton]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Clicking... on selector [@termsAndConditionsButton]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Clicking... on selector [@step4CheckoutButton]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Clicking... on selector [@payByBankWire]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Clicking... on selector [@step5CheckoutButton]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if the URL contains &#x27;http://automationpractice.com/index.php?controller&#x3D;order-confirmation&#x27; (23ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element &lt;Element [name&#x3D;@orderConfirmation]&gt; is present (48ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element &lt;Element [name&#x3D;@orderConfirmation]&gt; contains text &#x27;ORDER CONFIRMATION&#x27; (123ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element &lt;Element [name&#x3D;@orderComplete]&gt; is present (74ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element &lt;Element [name&#x3D;@orderComplete]&gt; contains text &#x27;Your order on My Store is complete.&#x27; (123ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if the page title equals &#x27;Order confirmation - My Store&#x27; (22ms)
+
+
+            </li>
+        </ul>
+
+        <p>
+            <span class="success"><strong>OK.</strong></span>
+            <span class="success"><strong>17</strong></span> assertions passed. (24.75s)
+        </p>
+        <h3>Check that new user can signup</h3>
+        <ul class="assertions">
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [Ariel_Bailey77@yahoo.com] on selector [@signUpEmailForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Submitting user data... on selector [@signUpButton]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Clicking... on selector [@genderForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [Kirstin] on selector [@firstNameForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [Turner] on selector [@lastNameForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [0KBlzuiWxpHsQub] on selector [@passwordForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Selecting user data.. with [//*[@id&#x3D;&quot;uniform-days&quot;]] with value [31]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Selecting user data.. with [//*[@id&#x3D;&quot;uniform-months&quot;]] with value [7]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Selecting user data.. with [//*[@id&#x3D;&quot;uniform-years&quot;]] with value [12]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [Kirstin] on selector [@addressFirstName]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [Turner] on selector [@addressLastName]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [869 Bailey Neck] on selector [@addressForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [Port Rhiannon] on selector [@cityForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [00000] on selector [@zipcodeForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Selecting user data.. with [//*[@id&#x3D;&quot;uniform-id_country&quot;]] with value [2]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Selecting user data.. with [//*[@id&#x3D;&quot;uniform-id_state&quot;]] with value [28]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [000-0000-000] on selector [@phoneForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [869 Bailey Neck] on selector [@aliasAddressForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Submitting user data... on selector [@registerButton]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if the URL is &#x27;http://automationpractice.com/index.php?controller&#x3D;my-account&#x27; (19ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element &lt;Element [name&#x3D;@pageHeading]&gt; contains text &#x27;MY ACCOUNT&#x27; (148ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element &lt;Element [name&#x3D;@signUpHeading]&gt; contains text &#x27;Welcome to your account. Here you can manage all of your personal information and orders.&#x27; (272ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if the page title equals &#x27;My account - My Store&#x27; (20ms)
+
+
+            </li>
+        </ul>
+
+        <p>
+            <span class="success"><strong>OK.</strong></span>
+            <span class="success"><strong>23</strong></span> assertions passed. (22.81s)
+        </p>
+        <h3>Check that existing user can log in</h3>
+        <ul class="assertions">
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [test_user123@gmail.com] on selector [@usernameForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [automation] on selector [@passwordForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Submitting user data... on selector [@signInButton]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if the URL is &#x27;http://automationpractice.com/index.php?controller&#x3D;my-account&#x27; (24ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element &lt;Element [name&#x3D;@invalidCredentials]&gt; is not present (58ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element &lt;Element [name&#x3D;@pageHeading]&gt; contains text &#x27;MY ACCOUNT&#x27; (123ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if the page title equals &#x27;My account - My Store&#x27; (15ms)
+
+
+            </li>
+        </ul>
+
+        <p>
+            <span class="success"><strong>OK.</strong></span>
+            <span class="success"><strong>7</strong></span> assertions passed. (11.38s)
+        </p>
+        <h3>Check that existing user can logout</h3>
+        <ul class="assertions">
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [test_user123@gmail.com] on selector [@usernameForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [automation] on selector [@passwordForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Submitting user data... on selector [@signInButton]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Clicking... on selector [@signOutButton]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if the URL is &#x27;http://automationpractice.com/index.php?controller&#x3D;authentication&#x27; (125ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element &lt;Element [name&#x3D;@pageHeading]&gt; contains text &#x27;AUTHENTICATION&#x27; (141ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if the page title equals &#x27;Login - My Store&#x27; (14ms)
+
+
+            </li>
+        </ul>
+
+        <p>
+            <span class="success"><strong>OK.</strong></span>
+            <span class="success"><strong>7</strong></span> assertions passed. (11.61s)
+        </p>
+        <h3>Check that user account data is correct</h3>
+        <ul class="assertions">
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [test_user123@gmail.com] on selector [@usernameForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Typing user data... with [automation] on selector [@passwordForm]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Submitting user data... on selector [@signInButton]
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if the URL is &#x27;http://automationpractice.com/index.php?controller&#x3D;identity&#x27; (16ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if value of element &lt;Element [name&#x3D;@firstName]&gt; equals &#x27;Manuel&#x27; (65ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if value of element &lt;Element [name&#x3D;@lastName]&gt; equals &#x27;Pineda&#x27; (71ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if value of element &lt;Element [name&#x3D;@email]&gt; equals &#x27;test_user123@gmail.com&#x27; (204ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element &lt;Element [name&#x3D;@dayOfBirth]&gt; contains text &#x27;17&#x27; (235ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element &lt;Element [name&#x3D;@monthOfBirth]&gt; contains text &#x27;December&#x27; (195ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if element &lt;Element [name&#x3D;@yearOfBirth]&gt; contains text &#x27;1990&#x27; (375ms)
+
+
+            </li>
+            <li>
+                <span class="success">&#10004;</span>
+
+              Testing if the page title equals &#x27;Identity - My Store&#x27; (17ms)
+
+
+            </li>
+        </ul>
+
+        <p>
+            <span class="success"><strong>OK.</strong></span>
+            <span class="success"><strong>11</strong></span> assertions passed. (10.04s)
+        </p>
+
+
+      <hr>
+
+  <div id="nightwatch-logo"></div>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script>
+$(function(){$("div.stacktrace").on("click","a",function(t){t.preventDefault();var e=$(this),c=e.parent().find("code");c.is(":visible")?e.text("hide stacktrace"):e.text("view stacktrace"),c.toggle()})});
+  </script>
+</body>
+</html>
