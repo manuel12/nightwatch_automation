@@ -3,6 +3,7 @@ const {
   STARTING_SIGN_UP
 } = require('../data/logs');
 const {
+  getElements,
   typeData,
   submit
 } = require('../utils/page-objects')
@@ -10,6 +11,7 @@ const {
 const loginPageCommands = {
   submit,
   typeData,
+  getElements,
 
   login(user, pass) {
     return this
@@ -21,6 +23,7 @@ const loginPageCommands = {
 
   startSignUp(user) {
     return this
+      .navigate()
       .typeData('@signUpEmailForm', user)
       .submit('@signUpButton')
   }
@@ -28,7 +31,7 @@ const loginPageCommands = {
 
 
 module.exports = {
-  url: 'http://automationpractice.com/index.php?controller=authentication&back=my-account',
+  url: 'http://automationpractice.com/index.php?controller=authentication',
   elements: {
     pageHeading: '#center_column > h1',
 
