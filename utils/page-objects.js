@@ -5,9 +5,8 @@ const {
   SUBMITTING_USER_DATA,
 } = require('../data/logs');
 
-function getElements() {
-  this.logAction(GETTING_ELEMENTS)
-  return Object.keys(this.elements);
+function getElements(arg) {
+  return arg === 'keys' ? Object.keys(this.elements) : this.elements;
 }
 
 function clickOnElement(selector) {

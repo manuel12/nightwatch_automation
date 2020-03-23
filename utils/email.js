@@ -12,8 +12,7 @@ Settings = {
     type: "login",
     user: process.env.GMAIL_USER,
     pass: process.env.GMAIL_PASSWORD
-  },
-  enabled: true
+  }
 }
 
 const transporter = nodemailer.createTransport({
@@ -31,9 +30,6 @@ const mailOptions = {
 };
 
 const Email = {
-  isEnabled: function() {
-    return Settings.enabled;
-  },
   sendEmail: (msg) => {
     if(!msg) throw 'Cannot send email, message is empty!';
 
