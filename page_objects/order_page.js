@@ -1,5 +1,6 @@
 const {
-  clickOnElement
+  clickOnElement,
+  getElements
 } = require('../utils/page-objects');
 const {
   COMPLETING_CHECK_OUT
@@ -7,6 +8,7 @@ const {
 
 const orderPageCommands = {
   clickOnElement,
+  getElements,
   completeCheckout() {
     return this
       .navigate()
@@ -77,7 +79,6 @@ module.exports = {
     },
     orderConfirmation: '#center_column > h1',
     orderComplete: '#center_column > div > p'
-
   },
 
   commands: [orderPageCommands]
