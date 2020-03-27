@@ -29,7 +29,7 @@ then run `npm install`
 
 The smoke tests are located inside the _tests/smokes_tests_ folder.
 
-In here the tests are created by instanciating the the Page Objects, located inside the _page_objects_ folder and using the functionalty provided by them for user intereactions. Then the browser object is used to make assertions of the page to test.
+In here the tests are created by instanciating the Page Objects located inside the _page_objects_ folder and using the functionalty provided by them to automate user intereactions. Then the browser object is used to make assertions of the current page.
 
 ### Running the tests
 
@@ -40,7 +40,7 @@ on headless mode just run `npm run test:headless:chrome`.
 
 ### Reports
 
-After the tests run an HTML report will be generated inside the _reports_ folder.
+After a tests run an HTML report will be generated inside the _reports_ folder.
 
 An email report can also be sent.
 
